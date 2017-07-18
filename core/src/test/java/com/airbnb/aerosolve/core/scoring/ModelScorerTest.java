@@ -72,13 +72,13 @@ public class ModelScorerTest {
   private static final String[] dataName3 = {
       "workclass", "education", "marital-status",
       "occupation", "relationship", "race", "sex",
-      "native-country"
+      "native-country", "age-group"
   };
 
   private static final String[] data3 = {
       "scientist", "collage", "married",
       "engineer", "single", "asian", "female",
-      "usa"
+      "usa", "xennial"
   };
 
 }
