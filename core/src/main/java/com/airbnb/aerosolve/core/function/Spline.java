@@ -43,7 +43,7 @@ public class Spline extends AbstractFunction {
     float[] newWeights = new float[numBins];
     float scale = 1.0f / (numBins - 1.0f);
     float diff = maxVal - minVal;
-    for (int i = 0; i < numBins; i++) {
+    for (int i = 0; i <= numBins; i++) {
       float t = i * scale;
       float x = diff * t + minVal;
       newWeights[i] = evaluate(x);
