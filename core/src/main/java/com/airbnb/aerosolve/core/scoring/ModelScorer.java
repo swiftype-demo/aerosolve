@@ -27,13 +27,16 @@ public class ModelScorer {
     this.transformer = new Transformer(modelConfig, model.getKey());
   }
 
-  /*
-    this assumes model file in resource folder, i.e. test/resources/ in unit test
-   */
+  // This assumes model file in resource folder, i.e. test/resources/ in unit test
   public ModelScorer(ModelConfig model) throws IOException {
-    this(new BufferedReader(new InputStreamReader(
-            ModelScorer.class.getResourceAsStream("/" + model.getModelName()))),
-        model);
+    this(
+      new BufferedReader(
+        new InputStreamReader(
+          ModelScorer.class.getResourceAsStream("/" + model.getModelName())
+        )
+      ),
+      model
+    );
   }
 
   public double rawProbability(Example example) {
